@@ -2,16 +2,24 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@Components/*": ["./src/components/*"],
-      "@Routes/*": ["./src/routes/*"],
-      "@Pages/*": ["./src/pages/*"],
-      "@Resources/*": ["./src/resources/*"],
-      "@Redux/*": ["./src/redux/*"],
-      "@Actions/*": ["./src/actions/*"],
-      "@Style/*": ["./src/style/*"],
-      "@Constants/*": ["./src/constants/*"],
-      "@Icons/*": ["./src/icons/*"],
-      "@Utils/*": ["./src/utils/*"],
+      "@Shared/*": [
+        "./src/shared/*"
+      ],
+      "@Core/*": [
+        "./src/core/*"
+      ],
+      "@Assets/*": [
+        "./src/assets/*"
+      ],
+      "@Pages/*": [
+        "./src/pages/*"
+      ],
+      "@Routes/*": [
+        "./src/routes/*"
+      ],
+      "@Styles/*": [
+        "./src/style/*"
+      ],
     }
   },
 }

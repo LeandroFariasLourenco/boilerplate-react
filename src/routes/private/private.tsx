@@ -1,25 +1,22 @@
-import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
-// import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { PATHS } from '@Constants';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  // const { isLogged } = useSelector((state) => state.login);
+  const condicao = false || true;
 
   return (
     <Route
       {...rest}
       render={(props) => (
-        true
+        condicao
           ? <Component {...props} />
           : <Redirect to={PATHS} />
       )}
     />
   );
 };
-
 PrivateRoute.propTypes = {
   component: PropTypes.func.isRequired,
 };

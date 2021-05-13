@@ -1,9 +1,10 @@
 require('dotenv').config();
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LodashPlugin = require('lodash-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
-  entry: `${process.env.SRC}${process.env.PROJECT_NAME}-index.js`,
+  entry: `${process.env.SRC}${process.env.PROJECT_NAME}-index.tsx`,
   plugins: [
     new HtmlWebpackPlugin({
       template: `./views/${process.env.PROJECT_NAME}-index.pug`,
@@ -12,7 +13,10 @@ module.exports = {
     new LodashPlugin(),
   ],
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.tsx', '.ts'],
+    plugins: [
+      new TsconfigPathsPlugin(),
+    ],
   },
   module: {
     rules: [
@@ -31,6 +35,10 @@ module.exports = {
             loader: 'eslint-loader',
           },
         ],
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        loader: 'awesome-typescript-loader',
       },
       {
         test: /\.pug$/,

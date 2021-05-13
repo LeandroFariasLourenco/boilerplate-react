@@ -1,5 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components';
 import { rem } from 'polished';
+import { ThemeProvider } from '@Shared/models/theme-provider';
 
 export default createGlobalStyle`
   * {
@@ -35,7 +36,7 @@ export default createGlobalStyle`
   }
 
   .popup-overlay {
-    ${({ theme }) => css`
+    ${({ theme }: ThemeProvider) => css`
       z-index: ${theme.zIndexes.overlay} !important;
       background-color: ${theme.colors.overlay};
     `}

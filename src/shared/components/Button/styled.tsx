@@ -28,5 +28,5 @@ const btnStyle = css`
 `;
 
 export const Wrapper = styled.button`
-  ${(props) => (props.reset ? btnReset : btnStyle)}
+  ${(props: any) => (props.reset ? btnReset : btnStyle)}
 `;

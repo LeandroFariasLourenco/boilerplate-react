@@ -1,10 +1,7 @@
-import React from 'react';
 import {
   Switch,
   BrowserRouter,
 } from 'react-router-dom';
-
-// import { PATHS } from '@Constants';
 
 // import Private from './private';
 // import Public from './public';

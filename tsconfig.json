@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "commonjs",
+    "outDir": "./build/",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "target": "es5",
+    "baseUrl": ".",
+    "paths": {
+      "@Shared/*": [
+        "src/shared/*"
+      ],
+      "@Core/*": [
+        "src/core/*"
+      ],
+      "@Assets/*": [
+        "src/assets/*"
+      ],
+      "@Pages/*": [
+        "src/pages/*"
+      ],
+      "@Routes/*": [
+        "src/routes/*"
+      ],
+      "@Styles/*": [
+        "src/style/*"
+      ],
+    }
+  },
+  "typeRoots": [
+    "./node_modules/@types",
+  ],
+  "forceConsistentCasingInFileNames": true,
+  "experimentalDecorators": true,
+  "emitDecoratorMetadata": true
+}
